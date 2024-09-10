@@ -13,31 +13,25 @@
     
     //Definir interfaz de clase, de mueble Silla
     interface Silla {
-        public function tienePatas(){
-        }
+        public function tienePatas();
 
-        public function sentarse(){
-        }
+        public function sentarse();
     }
 
     //Definir interfaz de clase, de mueble Mesas
     interface Mesa {
-        public function tienePatas(){
-        }
+        public function tienePatas();
 
-        public function apoyarCosas(){
-        }
+        public function apoyarCosas();
 
     }
 
     //Definir interfaz de clase, de mueble Sofas
     interface Sofa {
     
-        public function cantidadPersonas(){
-        }
+        public function cantidadPersonas();
 
-        public function sentarse(){
-        }
+        public function sentarse();
 
     }
 
@@ -45,36 +39,36 @@
 
     class SillaArtDeco implements Silla {
         public function tienePatas(){
-            // echo '<br>';
+            
             return "Silla Art Deco, esta silla NO tiene patas";
         }
 
         public function sentarse(){
-            // echo '<br>';
+            
             return "Silla Art Deco, SI Puedes sentarte";
         }
     }
 
     class SillaVectoriana implements Silla {
         public function tienePatas(){
-            // echo '<br>';
+            
             return "Silla Vectoriana, esta silla SI tiene patas";
         }
 
         public function sentarse(){
-            // echo '<br>';
+            
             return "Silla Vectoriana, SI Puedes sentarte";
         }
     }
 
     class SillaModerna implements Silla {
         public function tienePatas(){
-            // echo '<br>';
+            
             return "Silla Moderna, esta silla NO tiene patas";
         }
 
         public function sentarse(){
-            // echo '<br>';
+            
             return "Silla Moderna, NO Puedes sentarte";
         }
     }
@@ -83,36 +77,36 @@
 
     class MesaArtDeco implements Mesa {
         public function tienePatas(){
-            // echo '<br>';
+            
             return "Mesa Art Deco, esta mesa SI tiene patas";
         }
 
         public function apoyarCosas(){
-            // echo '<br>';
+            
             return true;
         }
     }
 
     class MesaVectoriana implements Mesa {
         public function tienePatas(){
-            // echo '<br>';
+            
             return "Mesa Vectoriana, esta mesa SI tiene patas";
         }
 
         public function apoyarCosas(){
-            // echo '<br>';
+            
             return true;
         }
     }
 
     class MesaModerna implements Mesa {
         public function tienePatas(){
-            // echo '<br>';
+            
             return "Mesa Moderna, esta mesa SI tiene patas";
         }
 
         public function apoyarCosas(){
-            // echo '<br>';
+            
             return false;
         }
     }
@@ -126,7 +120,7 @@
         }
 
         public function sentarse(){
-            // echo '<br>';
+            
             return true;
         }
     }
@@ -139,7 +133,7 @@
         }
 
         public function sentarse(){
-            // echo '<br>';
+            
             return true;
         }
     }
@@ -152,70 +146,70 @@
         }
 
         public function sentarse(){
-            // echo '<br>';
+            
             return true;
         }
     }
 
     //Constructor de Muebles
     interface FabricaMuebles {
-        public function crearSilla(){
-        }
+        public function crearSilla();
+        
 
-        public function crearMesa(){
-        }
+        public function crearMesa();
+        
 
-        public function crearSofa(){
-        }
+        public function crearSofa();
+        
     }
 
     class MueblesArtDeco implements FabricaMuebles {
         public function crearSilla(): Silla {
-            // echo '<br>';
+            
             return new SillaArtDeco();
         }
 
         public function crearMesa(): Mesa{
-            // echo '<br>';
+            
             return new MesaArtDeco();
         }
 
         public function crearSofa(): Sofa{
-            // echo '<br>';
+            
             return new SofaArtDeco();
         }
     }
 
     class MueblesVectorianos implements FabricaMuebles {
         public function crearSilla(): Silla {
-            // echo '<br>';
+            
             return new SillaVectoriana();
         }
 
         public function crearMesa(): Mesa{
-            // echo '<br>';
+            
             return new MesaVectoriana();
         }
 
         public function crearSofa(): Sofa{
-            // echo '<br>';
+            
             return new SofaVectoriano();
         }
     }
 
     class MueblesModernos implements FabricaMuebles {
         public function crearSilla(): Silla {
-            // echo '<br>';
+           
             return new SillaModerna();
         }
 
         public function crearMesa(): Mesa{
-            // echo '<br>';
+            
             return new MesaModerna();
         }
 
         public function crearSofa(): Sofa{
-            // echo '<br>';
+            
             return new SofaModerno();
         }
     }
